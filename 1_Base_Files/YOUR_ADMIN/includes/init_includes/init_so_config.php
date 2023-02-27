@@ -21,7 +21,7 @@ if (defined($module_constant)) {
   $current_version = constant($module_constant);
 } else {
   $current_version = '0.0.0';
-  // Checking for old Existing Super Orders installtions in database
+  // Checking for old Existing Super Orders installations in database
   $check = $db->Execute("SELECT configuration_group_id
                          FROM " . TABLE_CONFIGURATION_GROUP . "
                          WHERE configuration_group_title = '" . $module_name . "'");
