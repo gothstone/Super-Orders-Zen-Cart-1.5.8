@@ -808,7 +808,7 @@ function MultiCellHeight($w,$h,$txt,$border=0,$align='J',$fill=0)
     while($i<$nb)
     {
         //Get next character
-        $c=$s{$i};
+        $c=$s[$i];
         if($c=="\n")
         {
             //Explicit line break
