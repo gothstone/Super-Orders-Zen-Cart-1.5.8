@@ -331,9 +331,10 @@ if (($batched == true) and ($batch_item > 1) and (($batch_item % $forms_per_page
               <?php echo zen_image(DIR_WS_ICONS . 'tick.gif', ICON_TICK);
               echo '&nbsp;' . $order->products[$i]['qty']; ?>&nbsp;
             </td>
-            <?php echo $product_name; ?>
-            <?php
-            if (isset($order->products[$i]['attributes']) && (($k = sizeof($order->products[$i]['attributes'])) > 0)) {
+            <td class="dataTableContent">
+              <?php echo $product_name; ?>
+              <?php
+              if (isset($order->products[$i]['attributes']) && (($k = sizeof($order->products[$i]['attributes'])) > 0)) {
               ?>
               <ul>
                 <?php
