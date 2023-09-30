@@ -30,7 +30,15 @@
  * $Id: lcsd_merged_packing_slips.php v 2015-12-30 $
  */
 
-$display_tax = (TAX_ID_NUMBER == '' ? true : false);
+/**
+*$display_tax = (TAX_ID_NUMBER == '' ? true : false);
+* I think this does the same thing? Made the undefined constant error stop at least
+*/
+if (defined('TAX_ID_NUMBER')) {
+	$display_tax=TRUE;
+} else {
+	$display_tax=FALSE;
+}
 
 function lcsd_merged_packingslips_master_list($selected_oids, $merge_selected_oids)
 {
